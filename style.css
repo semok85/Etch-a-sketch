@@ -7,6 +7,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #444;
+  background-color: #fff8ea;
 }
 
 h1 {
@@ -31,8 +32,9 @@ h1 {
   height: 500px;
   border-radius: 8px;
   border: 1px solid #888;
-  box-shadow: hsla(0, 0%, 0%, 0.384) 8px 8px 0.1px;
+  box-shadow: #ff9494 8px 8px 0.1px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .navigation {
@@ -98,6 +100,7 @@ h1 {
 @media screen and (min-width: 900px) {
   .container {
     flex-direction: row;
+    align-items: flex-start;
   }
   .navigation {
     flex-direction: column;
