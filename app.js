@@ -1,6 +1,7 @@
 const label = document.querySelector(".label");
 const slider = document.querySelector("#slider");
 const canvas = document.querySelector(".canvas");
+const colorPic = document.querySelector("#color-pic");
 
 for (let i = 1; i <= 100; i++) {
   const pixel = document.createElement("div");
@@ -11,7 +12,7 @@ for (let i = 1; i <= 100; i++) {
 }
 const pixels = document.querySelectorAll(".pixel");
 const draw = (e) => {
-  e.target.setAttribute("style", `background-color: white`);
+  e.target.setAttribute("style", `background-color: ${colorPic.value}`);
   console.log("click");
 };
 pixels.forEach((element) => {
