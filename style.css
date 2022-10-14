@@ -35,6 +35,16 @@ h1 {
   box-shadow: #ff9494 8px 8px 0.1px;
   margin-bottom: 20px;
   background-color: white;
+  display: grid;
+}
+
+.grid-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.pixel {
+  background-color: #ff9494;
+  border: 1px solid white;
 }
 
 .navigation {
