@@ -5,6 +5,8 @@ const colorPic = document.querySelector("#color-pic");
 const btnContainer = document.querySelector(".btn-container");
 const buttons = document.querySelectorAll(".button");
 const button = document.querySelector(".button");
+const eraser = document.querySelector("#eraser");
+const color = document.querySelector("#color");
 
 //creating function canvas resolution
 const resolution = (numPxl) => {
@@ -62,3 +64,15 @@ const onClickButton = (e) => {
 for (let button of buttons) {
   button.addEventListener("click", onClickButton);
 }
+
+//create eraser function
+const onErase = () => {
+  const pixels = document.querySelectorAll(".pixel");
+  for (let pixel of pixels) {
+    const erasePixel = () => {
+      pixel.style = "background-color: white";
+    };
+    pixel.addEventListener("click", erasePixel);
+  }
+};
+eraser.addEventListener("click", onErase);
