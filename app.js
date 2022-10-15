@@ -7,6 +7,10 @@ const buttons = document.querySelectorAll(".button");
 const button = document.querySelector(".button");
 const eraser = document.querySelector("#eraser");
 const color = document.querySelector("#color");
+const rainbow = document.querySelector("#rainbow");
+const randomValue = () => {
+  return Math.floor(Math.random() * 255);
+};
 
 //creating function canvas resolution
 const resolution = (numPxl) => {
@@ -31,7 +35,6 @@ const drawing = (color) => {
   };
   for (let pixel of pixels) {
     pixel.addEventListener("click", draw);
-    console.log("click");
   }
 };
 
@@ -88,3 +91,16 @@ const onMainColor = () => {
   }
 };
 color.addEventListener("click", onMainColor);
+
+//create rainbow drawing function
+const onRainbow = () => {
+  const pixels = document.querySelectorAll(".pixel");
+  for (let pixel of pixels) {
+    const drawPixel = () => {
+      let rainbowColor = `rgb(${randomValue()},${randomValue()},${randomValue()})`;
+      pixel.style = `background-color: ${rainbowColor}`;
+    };
+    pixel.addEventListener("click", drawPixel);
+  }
+};
+rainbow.addEventListener("click", onRainbow);
