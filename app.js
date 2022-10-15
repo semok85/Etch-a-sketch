@@ -76,3 +76,15 @@ const onErase = () => {
   }
 };
 eraser.addEventListener("click", onErase);
+
+//create main color drawing function
+const onMainColor = () => {
+  const pixels = document.querySelectorAll(".pixel");
+  for (let pixel of pixels) {
+    const drawPixel = () => {
+      pixel.style = `background-color: ${colorPic.value}`;
+    };
+    pixel.addEventListener("click", drawPixel);
+  }
+};
+color.addEventListener("click", onMainColor);
