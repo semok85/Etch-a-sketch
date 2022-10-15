@@ -8,6 +8,7 @@ const button = document.querySelector(".button");
 const eraser = document.querySelector("#eraser");
 const color = document.querySelector("#color");
 const rainbow = document.querySelector("#rainbow");
+const clearButton = document.querySelector("#clear");
 const randomValue = () => {
   return Math.floor(Math.random() * 255);
 };
@@ -104,3 +105,6 @@ const onRainbow = () => {
   }
 };
 rainbow.addEventListener("click", onRainbow);
+
+//create clear function
+clearButton.addEventListener("click", clear);
